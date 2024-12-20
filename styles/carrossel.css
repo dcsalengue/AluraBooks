@@ -41,7 +41,10 @@
     margin-bottom: 0.5em;
 }
 
-.descrição {}
+.descrição {
+    padding-right: 1em;
+    line-height: 1.5em;
+}
 
 .descrição__titulo {
     color: var(--laranja);
@@ -61,8 +64,6 @@
 
 }
 
-.descrição__imagem {}
-
 .card__botões {
     display: flex;
     justify-content: space-between;
@@ -70,11 +71,14 @@
 
 .botões {
     display: flex;
+    align-items: center;
 }
 
 .botões__item {
     margin: 0 0.5em;
 }
+
+
 
 .botões__ancora {
     color: var(--branco);
@@ -82,4 +86,12 @@
     background-color: var(--laranja);
     padding: 1em 2.2em;
     text-decoration: none;
+}
+
+.descrição__estrelas{
+    display: flex;
+}
+
+.descrição__estrelas__estrela{
+    margin-right: 0.25em;
 }
