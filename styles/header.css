@@ -1,4 +1,4 @@
-.cabeçalho{
+.cabeçalho {
     background-color: var(--branco);
     display: flex;
     justify-content: space-between;
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.cabeçalho__menu-hamburguer{
+.cabeçalho__menu-hamburguer {
     width: 24px;
     height: 24px;
     background-image: url("../img/Menu.svg");
@@ -15,42 +15,51 @@
     display: inline-block;
 }
 
-.container{
+.container {
     display: flex;
     align-items: center;
 }
-.container__imagem{
+
+.container__titulo {
+    display: none;
+}
+
+.opções {
+    display: none;
+}
+
+.container__imagem {
     padding: 1em;
 }
 
 
-.lista-menu{
+.lista-menu {
     display: none;
-    position: absolute;
-}
-
-.container__botao{
-    display: none;
-}
-
-.container__botao:checked~.lista-menu{
-    display: block;
+    position: absolute;    
     top: 100%;
 }
 
-.lista-menu__titulo, 
-.lista-menu__item{
-    padding: 1em; 
-    background-color: var(--branco);
-    width: 60vw;
+.container__botao {
+    display: none;
 }
 
-.lista-menu__titulo{
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+    width: 60vw
+}
+
+.lista-menu__titulo {
     color: var(--laranja);
     font-weight: 700;
 }
 
-.lista-menu__link{
+.lista-menu__link {
     text-decoration: none;
     background: var(--azul-degrade);
     -webkit-background-clip: text;
@@ -59,6 +68,67 @@
     text-transform: uppercase;
 }
 
-.container__botao:checked~.cabeçalho__menu-hamburguer{
+.container__botao:checked~.cabeçalho__menu-hamburguer {
     background-color: var(--azul-degrade);
+}
+
+
+/* Tablet, width a partir de 1024 px */
+
+@media screen and (min-width: 1024px) {
+
+    .container__titulo,
+    .container__titulo--negrito {
+        display: inline-block;
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        color: black;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opções {
+        display: flex;
+        gap: 1em;
+    }
+
+    .opções__item {
+        text-transform: uppercase;
+        padding: 0 1em;
+
+    }
+
+    .opções__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabeçalho__menu-hamburguer {
+        display: none;
+    }
+
+    .container__imagem-transparente {
+        display: none;
+    }
+
+
+    
+    .opções__botao:checked~.lista-menu {
+        display: block;  
+        width: auto;
+    }
+
+    .lista-menu__item {
+        width: auto;
+    }
+
+    .opções__botao {
+        display: none;
+    }
 }
