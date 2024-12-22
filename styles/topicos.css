@@ -19,15 +19,15 @@
 
 .topicos__item {
     background-color: var(--laranja);
-    display: flex;  
-    margin:  0.5em;
+    display: flex;
+    margin: 0.5em;
 }
 
 .topicos__link {
     color: var(--branco);
     text-decoration: none;
     font-weight: 700;
-    font-size: 14px;    
+    font-size: 14px;
     padding: 1.5em;
 }
 
@@ -41,4 +41,11 @@
     .topicos__link {
         font-size: 24px;
     }
+}
+
+@media screen and (min-width: 1728px) {
+    .topicos {
+        padding: 3em 20vw;
+    }
+
 }
